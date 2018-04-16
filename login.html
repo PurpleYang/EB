@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title>登录</title>
+		<meta name="description" content="">
+		<meta name="keywords" content="">
+		<link href="css/style.css" rel="stylesheet" type="text/css" />
+		<link href="css/login.css" rel="stylesheet" type="text/css">
+		<script src="js/jquery-1.9.1.min.js" type="text/javascript"></script>
+		<script src="js/autoplay.js" type="text/javascript"></script>
+		<script src="js/jquery.validate.js"></script>
+		<script src="js/login.js"></script>
+		
+	</head>
+
+	<body>
+		<div class="logoheader">
+			<a href="index.html"></a>
+		</div>
+			<div class="clear"></div>
+		</div>
+		<div class="container">
+			<div class="content">
+				<div class="loginbox">
+					<ul class="hd font18 clear">
+						<li class="w241 login cur">账户登录</li>
+						<li class="w241 register">免费注册</li>
+					</ul>
+					<div class="clear"></div>
+					<div class="bd">
+						<form id="login" action="login.php" method="post">
+							<div class="username tbox mb8">
+								<!--<label></label>-->
+								<input type="text" class="logtext" name="username" value="" placeholder="邮箱/手机号码/小米ID" onFocus="if (this.value==this.defaultValue) this.value='';" onblur="if (this.value=='') this.value=this.defaultValue;">
+							</div>
+							<div class="pwd tbox">
+								<!--<label></label>-->
+								<input type="password" class="logtext" name="password" value="" placeholder="密码" onFocus="if (this.value==this.defaultValue) this.value='';" onblur="if (this.value=='') this.value=this.defaultValue;">
+							</div>
+							<div class="auto-login">
+								<span class="autol fl"><input type="checkbox" id="autoch"><label for="autoch">&nbsp;一小时内自动登录</label> </span>
+								<a href="###">找回密码?</a>
+							</div>
+							<input type="submit" class="" value="登录">
+						</form>
+						<form id="register" action="register.php" method="post">
+							<dl>
+								<dt for="username">用户名：</dt>
+								<dd><input type="text" name="username1" id="username"></dd>
+							</dl>
+							<dl class="">
+								<dt for="password">设置密码：</dt>
+								<dd><input type="password" name="password1" id="password"></dd>
+							</dl>
+							<dl class="">
+								<dt for="confirm_password">确认密码：</dt>
+								<dd><input type="password" value="" id="confirm_password" name="confirm_password1"></dd>
+							</dl>
+							<dl class="">
+								<dt for="email">邮箱：</dt>
+								<dd><input type="email" value="" id="email" name="email"></dd>
+							</dl>
+							<!--<dl class="">
+								<dt>验证码：</dt>
+								<dd><input type="text" value="" style="width:150px"></dd>
+							</dl>-->
+							<input type="submit" value="注册">
+						</form>
+					</div>
+				</div>
+				<div class="clear"></div>
+			</div>
+
+		</div>
+	</body>
+
+</html>

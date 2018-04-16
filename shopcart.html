@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>购物车</title>
+		<link type="text/css" rel="stylesheet" href="css/details.css" />
+		<link type="text/css" rel="stylesheet" href="css/magnifier.css" />
+		<link type="text/css" rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.min.css">
+		<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+		<script type="text/javascript" src="js/jquery.cookie.js"></script>
+		<script type="text/javascript" src="js/cookie.js"></script>
+	</head>
+
+	<body>
+		<div class="shophead">
+			<div class="shophead1">
+				<div class="shophead2">
+					<a href="index.html" class="shophead22">
+					</a>
+				</div>
+				<div class="shophead3">
+					<h2>我的购物车</h2>
+					<p id="hide">温馨提示：产品是否购买成功，以最终下单为准哦，请尽快结算</p>
+				</div>
+				<div class="shophead4">
+					<a href="login.html" class="shoplink">登录</a>
+					<span class="sep">|</span>
+					<a href="login.html" class="shoplink">注册</a>
+				</div>
+			</div>
+		</div>
+		<!--购物车中间主体部分-->
+		<div class="pagemain">
+			<!--购物车空时显示内容-->
+			<div class="shopbox">
+				<h2>您的购物车还是空的！</h2>
+				<a href="index.html">马上去购物</a>
+			</div>
+			<!--购物车有商品时显示内容-->
+			<div id="itembox">
+				<div class="itembox1">
+					<!--购物车产品列表标题-->
+					<div class="itembox2 clearfix">
+						<div class="colleft col-check">
+							           <input type="checkbox" id="selectAll" />
+							全选
+						</div>
+						<div class="colleft col-img">&nbsp;</div>
+						<div class="colleft col-name">商品名称</div>
+						<div class="colleft col-price">单价</div>
+						<div class="colleft col-num">数量</div>
+						<div class="colleft col-total">小计</div>
+						<div class="colleft col-action">操作</div>
+					</div>
+					<!--产品列表内容-->
+					<div class="itembox3" id="">
+						<!--<div class="itembox4">
+							<div class="itembox5">
+								<div class="itembox6 clearfix">
+                                    						<div class="colleft col-check">
+							复选框
+						</div>
+						<div class="colleft col-img">
+							<a href="###"><img src="" width="80" height="80"/></a>
+						</div>
+						<div class="colleft col-name">
+							<div class="tags"></div>
+							<h3 class="shopname"><a href="###" style="color: #424242;"> 米家智能摄像机云台版 白色 </a></h3>
+						</div>
+						<div class="colleft col-price">199元</div>
+						<div class="colleft col-num">
+							<div class="clearfix change-goods-num">
+								<a href="javascript:void(0)" class="shop_minus"><i class="iconfont">&#xe608;</i></a>
+								<input type="text" name="" value="2" class=""/>
+								<a href="javascript:void(0)" class="shop_plus"><i class="iconfont">&#xe607;</i></a>
+							</div>
+						</div>
+						<div class="colleft col-total">398元<p class="pre-info"></p></div>
+						<div class="colleft col-action">
+							<a href="javascript:void(0);" class="shopdel"><i class="iconfont">&#xe638;</i></a>
+						</div>
+								</div>
+							</div>
+						</div>-->
+					</div>
+				</div>
+				<!--空白间隔行-->
+				<div class="white"></div>
+				<!--购物车结算块-->
+				<div class="cartbar clearfix" id="">
+					<div class="section-left">
+						<a href="details.html" class="back-shopping">继续购物</a>
+						<span class="cart-total">
+			    	共 件商品，已选择 件
+			    </span>
+					</div>
+					<span class="total-price">
+				合计：<em></em> 元
+			</span>
+					<a href="###" class="tobuy">去结算</a>
+				</div>
+			</div>
+
+		</div>
+		<div class="footer">
+			<div class="service">
+				<ul class="service1">
+					<li>
+						<a href="#">预约维修服务</a>
+					</li>
+					<li>
+						<a href="#">7天无理由退货</a>
+					</li>
+					<li>
+						<a href="#">15天免费换货</a>
+					</li>
+					<li>
+						<a href="#">满150元包邮</a>
+					</li>
+					<li>
+						<a href="#">520余家售后网点</a>
+					</li>
+				</ul>
+			</div>
+			<div class="links">
+				<dl class="links1">
+					<dt>帮助中心</dt>
+					<dd>
+						<a href="#">账户管理</a>
+					</dd>
+					<dd>
+						<a href="#">购物指南</a>
+					</dd>
+					<dd>
+						<a href="#">订单操作</a>
+					</dd>
+				</dl>
+				<dl class="links1">
+					<dt>帮助中心</dt>
+					<dd>
+						<a href="#">账户管理</a>
+					</dd>
+					<dd>
+						<a href="#">购物指南</a>
+					</dd>
+					<dd>
+						<a href="#">订单操作</a>
+					</dd>
+				</dl>
+				<dl class="links1">
+					<dt>帮助中心</dt>
+					<dd>
+						<a href="#">账户管理</a>
+					</dd>
+					<dd>
+						<a href="#">购物指南</a>
+					</dd>
+					<dd>
+						<a href="#">订单操作</a>
+					</dd>
+				</dl>
+				<dl class="links1">
+					<dt>帮助中心</dt>
+					<dd>
+						<a href="#">账户管理</a>
+					</dd>
+					<dd>
+						<a href="#">购物指南</a>
+					</dd>
+					<dd>
+						<a href="#">订单操作</a>
+					</dd>
+				</dl>
+				<dl class="links1">
+					<dt>帮助中心</dt>
+					<dd>
+						<a href="#">账户管理</a>
+					</dd>
+					<dd>
+						<a href="#">购物指南</a>
+					</dd>
+					<dd>
+						<a href="#">订单操作</a>
+					</dd>
+				</dl>
+				<dl class="links1">
+					<dt>帮助中心</dt>
+					<dd>
+						<a href="#">账户管理</a>
+					</dd>
+					<dd>
+						<a href="#">购物指南</a>
+					</dd>
+					<dd>
+						<a href="#">订单操作</a>
+					</dd>
+				</dl>
+				<div class="rightcontent">
+					<p class="phone">400-100-5678</p>
+					<p class="address">周一至周日 8:00-18:00<br> （仅收市话费）
+					</p>
+					<a href="#" class="phone1">24小时在线客服</a>
+				</div>
+			</div>
+		</div>
+		<div class="banquan">
+			<div style="width: 1252px;height: 57px;">
+				<div class="logobottom"> 小米官网 </div>
+				<div class="info1">
+					<p class="info1_1">
+						<a href="#">小米商城</a><span class="sep">|</span>
+						<a href="#">MIUI</a><span class="sep">|</span>
+						<a href="#">米家</a><span class="sep">|</span>
+						<a href="#">米聊</a><span class="sep">|</span>
+						<a href="#">多看</a><span class="sep">|</span>
+						<a href="#">路由器</a><span class="sep">|</span>
+						<a href="#">小米天猫店</a><span class="sep">|</span>
+						<a href="#">隐私政策</a><span class="sep">|</span>
+						<a href="#">问题反馈</a><span class="sep">|</span>
+						<a href="#">Select Region</a>
+					</p>
+					<p>©
+						<a href="#">mi.com</a> 京ICP证110507号
+						<a href="#">京ICP备10046444号</a>
+						<a href="#">京公网安备11010802020134号 </a>
+						<a href="#">京网文[2014]0059-0009号</a> <br> 违法和不良信息举报电话：185-0130-1238，本网站所列数据，除特殊说明，所有数据均出自我司实验室测试
+					</p>
+				</div>
+				<div class="info2">
+					<a href="#"><img src="images/truste.png" /></a>
+					<a href="#"><img src="images/v-logo-2.png" /></a>
+					<a href="#"><img src="images/v-logo-1.png" /></a>
+					<a href="#"><img src="images/v-logo-3.png" /></a>
+					<a href="#"><img src="images/ba10428a4f9495ac310fd0b5e0cf8370.png" /></a>
+				</div>
+			</div>
+			<div class="guanggao">探索黑科技，小米为发烧而生</div>
+		</div>
+	</body>
+
+</html>
+<script>
+	//全选
+	$("#selectAll").click(function(){
+		$(".itembox1").prop( "checked" , $(this).prop("checked") );
+		jiesuan();
+	})
+	//		alert(document.cookie);
+	if(document.cookie) {
+		var userstatus = $.cookie("username"); //取cookie中的值
+		var loginstatus = $.cookie("loginstatus");
+		var shophead4 = document.querySelector(".shophead4");
+		var shopbox = document.querySelector(".shopbox");
+		var hide = document.getElementById("hide");
+		var itembox = document.getElementById("itembox");
+		var itembox3 = document.querySelector(".itembox3");
+
+		if('loginstatus' && 'userstatus') { //一小时之内不用重复登录
+			//  if($_GET['del']){ //清除cookie
+			//      setcookie('username','',time()-3600);
+			//      setcookie('password','',time()-3600); 
+			//      setcookie('loginstatus','',time()-3600); 
+			//      window.location.href="index.html";
+			//  }
+			//  $("#currentuser").innerHTML="'欢迎您''.$userstatus.''<a href="index.html?del=1">登出</a>'";//登录成功的状态
+			//$("#currentuser").html(userstatus);
+			hide.style.display = "block";
+			shophead4.innerHTML = `<div id="currentuser1">您好，${userstatus}&nbsp;<a href="currentuser.php?del=1">登出</a></div>`;
+			//alert(userstatus);
+			//  echo $user.' welcome, <a href="login.php?del=1">log out</a>';
+		}
+	}
+	//alert('userstatus');
+	function  getitem(){
+		var ajax = new XMLHttpRequest();
+		ajax.open("POST", "printitem.php", true); //
+		ajax.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+		ajax.send();
+		ajax.onreadystatechange = function() {
+			if(ajax.status == 200 && ajax.readyState == 4) {
+				var res = ajax.responseText;
+				arr = JSON.parse(res);
+				if(arr) {
+					$(".shopbox").attr("style","display:none");
+					$("#itembox").attr("style","display:block");
+//                  console.log(arr);
+//					if(arr){
+	                    var carttotal="";
+	                    var carttotal1="";
+						var str = "";//放在外面清空不要放在for里不然每次都会清空只有最后一条
+//					var carttotal="共"+arr.length+"件商品，已选择 件";
+//	                 $(".cart-total").html(carttotal);//打印商品总数
+					for(var i1 = 0; i1 < arr.length; i1++) {
+						(function(i){
+//							img_url=arr[i].simg;
+//						console.log(img_url);
+//						$("img").attr("src",arr[i].simg);
+
+//						var html="";
+						str += `
+						<div class="itembox4">
+							<div class="itembox5">
+								<div class="itembox6 clearfix">
+                                    	<div class="colleft col-check">
+							           <input type="checkbox" />
+						            </div>
+						<div class="colleft col-img">
+							<a href="###"><img src="${arr[i].simg}" width="80" height="80"/></a>
+						</div>
+						<div class="colleft col-name">
+							<div class="tags"></div>
+							<h3 class="shopname"><a href="###" style="color: #424242;">${arr[i].sname}</a></h3>
+						</div>
+						<div class="colleft col-price">${arr[i].sprice}元</div>
+						<div class="colleft col-num">
+							<div class="clearfix change-goods-num">
+								<a href="javascript:void(0)" class="shop_minus" onclick="minusCart(this,${arr[i].sid})"><i class="iconfont">&#xe608;</i></a>
+								<input type="text" name="num" value="${arr[i].snum}" class="itemnum" onblur="itemnum(this,${arr[i].sid})"/>
+								<a href="javascript:void(0)" class="shop_plus"onclick="plusCart(this,${arr[i].sid})"><i class="iconfont">&#xe607;</i></a>
+							</div>
+						</div>
+						<div class="colleft col-total">${arr[i].sprice*arr[i].snum}元<p class="pre-info"></p></div>
+						<div class="colleft col-action">
+						    <div id="signal" style="display:none;">${arr[i].sid}</div>
+							<a href="javascript:void(0);" class="shopdel" id="shopdel" onclick="item_del(this)"><i class="iconfont">&#xe638;</i></a>
+						</div>
+								</div>
+							</div>
+						</div>`;
+//						itembox3.innerHTML += str;
+//                      html+=str;
+//                    console.log(str);
+                         carttotal=Number(carttotal+parseInt(arr[i].snum));//计算商品数量和
+//                       console.log(carttotal);
+
+					    $(".itembox3").html(str);//appened,当不+=时，不能用html(),只会输出最后一个，会覆盖
+						})(i1);
+	
+					}
+                     carttotal1="共"+carttotal+"件商品，已选择 件";
+	                 $(".cart-total").html(carttotal1);//打印商品总数
+					
+//				console.log(res);
+				} else {
+					$(".shopbox").attr("style","display:block");
+					$("#itembox").attr("style","display:none");
+//					shopbox.style.display = "block";
+//					 itembox.style.display = "none";
+				
+				}
+
+			}
+		}
+		//      $.ajax({
+		//       
+		//       url:"printitem.php",
+		//       data:{},//前面命名，后面是值
+		//       type:"POST",
+		//       dataType:"JSON",
+		//       success: function(data){
+		//           
+		//             alert(data.sname);//如果是个JSON数据,这个data 可以点.出name来。   说明返回的data是一个ajax数据。
+		//           //所以ajax，不用拼字符串了，直接调用一个方法json_encode();
+		//           //但是要注意，再把数组转化成json是，注意它最好是一个关联数组。
+		//            
+		//           //alert(s.name);   //s. 这个是success: function(s)值
+		//           
+		////           $("#name").text(s.name);   //返回了一个值的
+		//           
+		//       }
+		//       
+		//        
+		//        
+		//    });
+	};
+//	$(document).ready(
+//	getitem();
+//	);
+	window.onload=function(){
+	   getitem();
+
+	}
+
+	//	    var tid=$('.shopdel').parent().parent().find("div").eq(0).html();
+	//      console.log(tid);
+	//删除
+	//	  $(document).ready(function(){
+//	$('.shopdel').on('click', function() {
+
+	 function item_del(_this){
+
+		var tid = $(_this).parent().find("div").eq(0).text();
+//      var tid = $("#signal").text();
+//		console.log(tid);
+//		var data = "id=" + tid;
+		var ajax = new XMLHttpRequest();
+		ajax.open("POST", "deleteitem.php", true); //
+		ajax.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+		ajax.send("id="+tid);
+		ajax.onreadystatechange = function() {
+			if(ajax.status == 200 && ajax.readyState == 4) {
+				var res = ajax.responseText;
+//				alert(res);
+				switch(res) {
+					case "1":
+//						location.reload();
+	                     getitem();	
+						
+						break;
+					case "2":
+						alert("删除失败");
+						break;
+				}
+			}
+		}
+	}
+//	})
+	//	  })
+
+//		function setPrice(o) {//设置小计和总价  
+//	      var tr = o.closest('tr');  
+//	      var ipt = tr.find('input');  
+//	      ipt.filter(':last').val(parseInt(o.val()) * parseInt(ipt.eq(0).val(), 10));  
+//	      var sum = 0;  
+//	      o.closest('tbody').find('input[name="subtotal_price"]').each(function () { sum += parseInt(this.value, 0) || 0; })  
+//	          .end().find('td:last').html(sum+'元')  
+//	
+//	  }  
+
+//    $(".itemnum").mouseup(function(){
+//	 		  cartNum(num_input, id, num);  
+//	          getitem();
+//	 })
+      function itemnum(_this,id){
+//    	  var num_input=$(".itemnum");
+          var num_input = $(_this);
+      	  var num=parseInt($(_this).val());
+//    	  alert(num);
+	      cartNum(num_input, id, num);  
+      	  getitem();
+      }
+
+
+	  //减  
+	  function minusCart(_this, id){  
+	      var num_input = $(_this).next('input[name="num"]');  
+	      var num = parseInt(num_input.val());  
+	      num--;  
+	      if(num <= 0){  
+	          return false;  
+	      } else {  
+	          num_input.val(num);  
+//	          setPrice(num_input);  
+	          cartNum(num_input, id, num);  
+	      }  
+	      getitem();
+	  }  
+	  //加  
+	  function plusCart(_this,id){  
+	      //获取购买数量  
+	      var num_input = $(_this).prev('input[name="num"]');  
+	      var num = parseInt(num_input.val());  
+//	      var total_quantity = parseInt(num_input.attr('max'));  
+//	      if(num >= total_quantity){  
+//	          alert('库存不足');  
+//	          return false;  
+//	      }else {  
+	          //alert(num);  
+	          num = parseInt(num) + 1;  
+	          num_input.val(num);  
+//	          setPrice(num_input);  
+	          cartNum(num_input, id, num);  
+	          getitem();
+//	      }  
+	  }  
+
+	  /**  
+	   * 修改购物车商品数量  
+	   * @param _this  
+	   * @param id  
+	   * @param num  
+	   */  
+	  function cartNum(_this, id, num){  
+	      $.ajax({  
+	          type: 'POST',  
+	          url: 'updateitem.php',  
+	          data: {id: id, num: num},  
+	          dataType: 'json',  
+	          success: function (res) {  
+//	              if (res.status == 1) {  
+//	                  _this.val(num);  
+//	              }else{  
+//	                  alert(res.info);  
+//	              }  
+	          }  
+	      });  
+	  }
+</script>
